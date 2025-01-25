@@ -1,0 +1,50 @@
+/*Incorporating CSS into HTML, trying to explpore more fonts to accentuate my page*/
+html {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: "Tahoma","segoe", sans-serif;
+}
+/*Aligning the header to the center*/
+header {
+text-align: center;
+}
+/*Body Styles. I'm still learning complimentary background colors and what works best together*/
+body{
+    background-color: #f1f1f3;
+    margin: 0.5rem;  
+}
+/*Paragraph Styles*/
+p {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+/*Removing the underline in hyperlink tags*/
+  a {
+    text-decoration: none;
+    color: hsl(242, 75%, 52%);
+  }
+/*Heading Style 1*/
+  h1 {
+    color: black;
+    font-family: "segoe", sans-serif;
+    text-align: center;
+    text-shadow:#303e4c 2px 2px 8px;
+    font-size: 40px;
+    line-height: 1;
+ }
+/*Heading Style 2, adding shadows and color*/
+  h2 {
+    color: black;
+    font-family: "segoe", sans-serif;
+    text-align: left;
+    font-size: 30px;
+    color: #f0f2f4;
+    background-color: #018989;
+    line-height: 1;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 15px;
+  }
