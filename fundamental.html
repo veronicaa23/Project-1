@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals</title>
+    <meta
+    name="CSS Fundamentals"
+    coontent="CSS Fundamentals Q&A"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- CSS Fundamentals and Definition of CSS-->
+        <h1>CSS Fundamentals</h1>
+        <hr>
+        <section>
+            <h2>What is CSS?</h2>
+            <p>CSS stands for Cascading Style Sheets. It is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+        </section>
+    </header>
+    <main>
+        <!--Quetion 1 Section-->
+        <section>
+            <h2>
+                Question 1?
+            </h2>
+            <h3>Explain how CSS differs from HTML in the context of web development.</h3>
+            <p>
+                HTML (HyperText Markup Language) is what gives a webpage its structure. It organizes the content into elements like headings, paragraphs, and lists—basically, it’s the backbone of a webpage. CSS (Cascading Style Sheets), on the other hand, is what makes it look good. It handles the design side of things, like colors, fonts, and layout. In simple terms, HTML builds the framework of the page, and CSS brings it to life with style and visual appeal.
+            </p>
+        </section>
+        <!--Question 2 Section-->
+        <section>
+            <h2>Question 2?</h2>
+            <h3>List the methods of including CSS in an HTML document and briefly describe each.</h3>
+            <p>
+                There are three main ways to include CSS in an HTML document:
+                <ul>
+                    <li>Inline CSS: This method involves adding the CSS directly to the HTML element using the style attribute. It’s useful for making quick changes to a single element, but it can be hard to maintain and update across multiple pages.</li>
+                    <li>Internal CSS: This method involves adding the CSS within the "style" element in the "head" section of the HTML document. It’s useful for applying styles to a single page, but it can be cumbersome to manage across multiple pages. </li>
+                    <li>External CSS: This method involves linking an external CSS file to the HTML document using the "link" element in the "head" section. It’s the most efficient way to apply styles across multiple pages, as changes to the CSS file will be reflected across all linked pages.</li>
+                </ul>
+
+            </p>
+        </section>
+        <!--Question 3 Section-->
+        <section>
+            <h2>Question 3?</h2>
+            <h3>Describe the anatomy of a CSS rule. </h3>
+            <p>
+                A CSS rule has two main parts: the selector and the declaration block. The selector tells the browser which HTML elements you want to style. The declaration block, which is wrapped in curly braces {}, contains the actual styles. Inside, you’ll find declarations, each made up of a property (what you want to style) and a value (how you want it to look). Properties and values are separated by a colon : and end with a semicolon ;.
+            </p>
+        </section>
+        <!--Question 4 Section-->
+        <section>
+            <h2>Question 4?</h2>
+            <h3>When might you want to use RGBA instead of RGB?</h3>
+            <p>
+                You'd want to use RGBA (Red, Green, Blue, Alpha) instead of RGB when you need to specify the opacity of a color. The "A" in RGBA stands for alpha, which controls the transparency of the color. This can be useful for creating overlays, gradients, or other effects where you want the background to show through.
+            </p>
+            </section>
+            <!--Question 5 Section-->
+            <section>
+                <h2>Question 5?</h2>
+                <h3>How do Hex color values differ from RGB?</h3>
+                <p>
+                    Hex color values are another way to represent colors in CSS. They are written as a pound sign # followed by a six-digit code that represents the amount of red, green, and blue in the color. Each pair of digits represents one of the color channels, with values ranging from 00 to FF (0 to 255 in decimal). Hex values are often used for their brevity and ease of use in web development. RGB values, on the other hand, are written as rgb() and specify the amount of red, green, and blue in a color using decimal values between 0 and 255. Both hex and RGB values can be used to specify colors in CSS, but they differ in syntax and how they represent color channels.
+                </p>
+            </section>
+            <!--Question 6 Section-->
+            <section>
+                <h2>Question 6?</h2>
+                <h3>When might a developer prefer to use HSL over other color formats?</h3>
+                <p>
+                    A developer might prefer to use HSL (Hue, Saturation, Lightness) over other color formats when they want more control over the color's appearance. HSL allows you to specify the hue (the type of color), saturation (the intensity of the color), and lightness (the brightness of the color) separately, giving you more flexibility in creating and adjusting colors. HSL can be especially useful for creating color schemes, gradients, or other effects where precise color control is needed.
+                </p>
+            </section>
+            <!--Question 7 Section-->
+            <section>
+                <h2>Question 7?</h2>
+                <h3>What are the primary text properties used in CSS to modify the appearance and layout of text?</h3>
+                <p>
+                    The primary text properties used in CSS to modify the appearance and layout of text include:
+                    <ul>
+                        <li>font-family: Specifies the font of the text.</li>
+                        <li>font-size: Specifies the size of the text.</li>
+                        <li>font-weight: Specifies the boldness of the text.</li>
+                        <li>font-style: Specifies the style of the text (italic, oblique, normal).</li>
+                        <li>text-align: Specifies the alignment of the text (left, right, center, justify).</li>
+                        <li>text-decoration: Specifies the decoration of the text (underline, overline, line-through, none).</li>
+                        <li>line-height: Specifies the height of a line of text.</li>
+                        <li>letter-spacing: Specifies the spacing between characters.</li>
+                        <li>word-spacing: Specifies the spacing between words.</li>
+                    </ul>
+                </p>
+            </section>
+            <!--Question 8 Section-->
+            <section>
+                <h2>Question 8?</h2>
+                <h3>In what scenarios might it be beneficial to use vh or vw as a unit for font size?</h3>
+                <p>
+                    A scenario where it might be beneficial to use vh or vw as a unit for font size is when you want the font size to be responsive to the viewport size. Using vh (viewport height) or vw (viewport width) as a unit allows the font size to scale proportionally with the viewport, making it easier to create designs that adapt to different screen sizes. This can be especially useful for creating responsive layouts that look good on a variety of devices and screen sizes.
+                </p>
+            </section>
+            <!--Question 9 Section-->
+            <section>
+                <h2>Question 9?</h2>
+                <h3>Explain the difference between em and rem units.</h3>
+                <p>
+                    The difference between em and rem units lies in how they are calculated. The em unit is relative to the font size of the parent element, while the rem unit is relative to the font size of the root element (usually the "html" element). This means that em units are relative to the font size of the nearest parent element with a font size specified, while rem units are relative to the font size of the root element. This can make rem units easier to work with for creating consistent and scalable designs, as changes to the root font size will affect all rem units on the page.
+                </p>`
+            </section>
+            <!--Question 10 Section-->
+            <section>
+                <h2>Question 10?</h2>
+                <h3>If multiple font families are listed in the font-family property, how does the browser decide which one to display?</h3>
+                <p>
+                    In the order they are listed. The browser will try to use the first font family in the list, and if that font is not available on the user's system, it will move on to the next font family in the list. This allows you to specify a list of fallback fonts in case the user's system does not have the primary font you want to use. It's a good practice to include a generic font family at the end of the list (like "sans-serif" or "serif") to ensure that the browser can display a suitable font even if none of the specified fonts are available.
+                </p>
+            </section>
+
+    </main>
+</body>
+</html>
