@@ -1,50 +1,182 @@
-/*Incorporating CSS into HTML, trying to explpore more fonts to accentuate my page*/
+
 html {
-    box-sizing: border-box;
+    box-sizing: border-box; /*Using the box model to create a digital CV.*/
     width: 100%;
-    font-family: "Tahoma","segoe", sans-serif;
+    font-family: "Tahoma","segoe", sans-serif; /*Found my font from Cssfontacker.com*/
+    font-size: 18px; /*Setting base font size*/
 }
-/*Aligning the header to the center*/
-header {
-text-align: center;
+
+/*Making my image rounded & adding a border to the image*/
+.border-solid
+{
+    border: 5px solid #018989;
+    border-radius: 50%;
+    padding: 0.5rem;
 }
+
 /*Body Styles. I'm still learning complimentary background colors and what works best together*/
-body{
-    background-color: #f1f1f3;
-    margin: 0.5rem;  
+body
+{
+    background-color: #f1f1f3; /*Giving the background a light grey color for a misty cloud appearance*/
+    margin: 0.5rem;
+    line-height: 1.5; /*Line height for readability*/
+    padding: 1rem; /*Padding for spacing*/
+    border: 2px solid #018989;
 }
-/*Paragraph Styles*/
-p {
-    font-size: 18px;
-    color: black;
-    text-align: center;
-}
+
+main section, footer section { 
+    margin: 3rem 0;
+    border-top: 2px solid #018989; /* Adding a top border to sections */
+  }
+
 /*Removing the underline in hyperlink tags*/
   a {
-    text-decoration: none;
-    color: hsl(242, 75%, 52%);
+    text-decoration: none; /*Removing the underline in hyperlinks*/
+    color: #07b6b6; /*Changing the color of hyperlinks to a lighter color of the shadow in headings*/
   }
 /*Heading Style 1*/
   h1 {
-    color: black;
-    font-family: "segoe", sans-serif;
-    text-align: center;
-    text-shadow:#303e4c 2px 2px 8px;
-    font-size: 40px;
-    line-height: 1;
+    text-align: center; /*Centering the main heading*/
+    text-shadow:#303e4c 2px 2px 8px; /*Adding shadow for decoration and attention*/
+    font-size: 2rem; /*Large font size for my name because it's the main heading*/
  }
 /*Heading Style 2, adding shadows and color*/
   h2 {
-    color: black;
-    font-family: "segoe", sans-serif;
-    text-align: left;
-    font-size: 30px;
+    text-align: left; /*Aligning subheadings to the left*/
+    font-size: 1.6rem; /*Setting font size for subheadings for distinction*/
     color: #f0f2f4;
-    background-color: #018989;
-    line-height: 1;
+    background-color: #018989; /*Using the same color as the border to create a theme*/
+    line-height: 1; /*Line height for readability*/
+  }
+/*Heading Style 3*/
+  h3 {
+    font-size: 1.2rem; /*Setting font size for subheadings for distinction*/
+  }
+  p, li, table, form {
+    font-size: 0.8rem;
   }
 
+/*Paragraph Styles*/
+p {
+  text-align: center; /*Centering the paragraph*/
+}
+
+/*Adding space and border in table cells, making content more readable*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px; /*Adds spacing incide the cells*/
+  }
+
+  /*Adjusting form elements*/
+  form input, form textarea, form select 
+  {
+    border: 2px solid #cccccc;
+    padding: 0.2rem 0.5rem;
+    background-color: #f1f1f3;
+  }
+
+  form fieldset
+   {
+    border: none;
+  }
+
+  form button
+  {
+    border: 2px solid #cccccc;
+    padding: 0.6rem 1rem;
+    background-color: #f1f1f3;
+    cursor: pointer; /*Changes the cursor to a pointer when hovering over the button*/
+  }
+  
+  /*Removing Outlines from form elements*/
+  form input, form textarea {
+    outline: none;
+  }
+
+  header section {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    height: 22rem;
+  }
+
+  
+  /*HEADER - Introduction Section*/
+  header section .image-container {
+    align-self: center; /* Aligns the image to the start of the flex container */
+    width: 15rem; /* Sets a fixed width for the image container */
+    height: 15rem; /* Sets a fixed height for the image container */
+  }
+
+  header section .image-container img {
+    display: block; /* Ensures no extra space below the image */
+    width: 100%; /* Makes the image responsive */
+    height: 100%; /* Maintains the aspect ratio */
+
+    border-radius: 100%; /* Makes the image circular */
+
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: 100% 50%; /* Adjusts the focus of the image */
+  }
+
+  header section .name-container {
+    align-self: center;
+  }
+
+  header section .information-container {
+    align-self: flex-end;
+  }
+
+/*SKill - Description Section*/
+.skills .skills-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*Contact Section*/
+.contact .form-container {
+    display:flex;
+    align-items: center;
+    flex-direction: column; /* Centers the form vertically and horizontally */
+}
+
+.contact .text-input-container,
+.contact .checkbox.container,
+.contact .select-container {
+    display:flex;
+    width: 20rem;
+    margin-bottom: 1rem;
+    
+}
+
+.contact .text-input-container label,
+.contact .select-container label {
+    flex-grow: 1;
+}
+
+.contact .text-input-container input,
+.contact .text-input-container textarea,
+.contact .select-container select
+{
+  width: 15rem;
+}
+
+.contact .text-input-container textarea {
+    height: 10rem; /* Sets a default height */
+}
+
+  .contact .button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+  }
+.contact .button-container button [type=reset] {
+    margin-right: 1rem;
+}
+
   footer {
-    text-align: center;
+
     font-size: 15px;
   }
+ 
