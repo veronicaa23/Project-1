@@ -1,4 +1,3 @@
-
 html {
     box-sizing: border-box; /*Using the box model to create a digital CV.*/
     width: 100%;
@@ -33,13 +32,35 @@ main section, footer section {
   a {
     text-decoration: none; /*Removing the underline in hyperlinks*/
     color: #07b6b6; /*Changing the color of hyperlinks to a lighter color of the shadow in headings*/
+    transition: 1s
+  }
+/*HOVER effect for hyperlinks that i'm using to change color*/
+  a:hover {
+    color: #b60707 /* Using a complimentary color for hover effect*/
   }
 /*Heading Style 1*/
   h1 {
     text-align: center; /*Centering the main heading*/
-    text-shadow:#303e4c 2px 2px 8px; /*Adding shadow for decoration and attention*/
-    font-size: 2rem; /*Large font size for my name because it's the main heading*/
+    font-size: 3rem; /*Large font size for my name because it's the main heading*/
  }
+
+ /*Credit for shadow dance: https://codepen.io/nefejames/pen/XJrrPRj */
+.name-container {
+    color: #fdfdfd;
+    text-shadow: 5px 5px 0 #003d3d, 10px 10px 0 #015656;
+    animation: shadow-dance 3s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #003d3d, 10px 10px 0 #015656;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #015656, -10px -10px 0 #003d3d;
+    }
+}
+
+
 /*Heading Style 2, adding shadows and color*/
   h2 {
     text-align: left; /*Aligning subheadings to the left*/
@@ -95,6 +116,8 @@ th, td {
   form input, form textarea {
     outline: none;
   }
+
+ 
 
   header section {
     display: flex;
@@ -179,4 +202,108 @@ th, td {
 
     font-size: 15px;
   }
- 
+
+  /*default to smaller devices (mobile)*/
+@media (max-width:480px) {
+    * {
+        box-sizing: border-box;
+        width: 100%;
+    }
+/*Making sure my image doesn't come out big, but still working on how i can make it circular*/
+    .image-container .border-solid {
+        border-radius: 50%;
+    }
+    header section .image-container img {
+        width: 100%; 
+        height: 100%;
+
+        border-radius: 50%;
+
+        object-fit: cover; 
+        object-position: 50% 50%; /* Adjusts the focus of the image */
+      }
+/*Trying to align height and adjust font*/
+      header section {
+        display: flex;
+        justify-content: space-between;
+        height: 14rem;
+      }
+    .imformation-container {
+        font-size: 0.2rem;
+    }
+
+    /*Trying to minimize fonts for easy readbility*/
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 0.7rem;
+    }
+
+    h3 {
+        font-size: 0.5rem;
+    }
+
+    p {
+        font-size: 0.4rem;
+    }
+
+    p, li, table, form {
+        font-size: 0.4rem;
+    }
+/*Fixed width because originally the text was outside the border*/
+    .reflection-container {
+        width: 80%;
+    }
+    body {
+        width: 100%;
+        font-size: 0.4rem;
+        padding: 1rem;
+    }
+    table {
+        width: 50%;
+      }
+/*Would love to fix this section and try to align things better for mobile*/
+    .contact .text-input-container,
+    .contact .checkbox.container,
+    .contact .select-container {
+        display:flex;
+        width: 10rem;
+        margin-bottom: 0.2rem;  
+        font-size: 8px;
+    }
+
+    .contact .text-input-container label,
+    .contact .select-container label {
+        flex-grow: 1;
+    }
+
+    .contact .text-input-container input,
+    .contact .text-input-container textarea,
+    .contact .select-container select
+    {
+        width: 7rem;
+    }
+
+    .contact .text-input-container textarea {
+        height: 5rem; /* Sets a default height */
+        font-size: 8px;
+    }
+
+    .contact .button-container button [type=reset] {
+         margin-right: 1rem;
+    }   
+
+   .checkboxes-container label {
+        display: inline-block;
+        padding-right: 10px;
+        white-space: nowrap;
+   }
+        
+    }
+    
+
+
+
+

@@ -6,23 +6,32 @@
     <title>Veronica Aguiar's Digital Cv</title>
     <meta
     name="description"
-    content=""Digital CV of Veronica Aguiar,software engineer in the making at Springboard"
+    content="Digital CV of Veronica Aguiar,software engineer in the making at Springboard"
     >
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/user?f=classic&s=solid">
 </head>
 <body>
    <header>
     <!--Introduction-->
     <section>
+<div class="image-container">
 <img
-src="myimage.png"
-alt="Picture of Veronica Aguiar"
-width="200"
+    src="myimage.png"
+    alt="Picture of Veronica Aguiar"
+    width="200"
+    class="border-solid"
 />
-<h1>Veronica Aguiar</h1>
+</div>
 
-<p> Email: <a href="mailto:veronicaaguiar23@gmail.com">veronicaaguiar23@gmail.com</a> </p>
-<p> Phone: (386) 837-6330 </p>
+<div class="name-container"> 
+    <h1 class="name-container">Veronica Aguiar</h1>
+</div>
+
+<div class= "information-container">
+    <p> Email: <a href="mailto:veronicaaguiar23@gmail.com">veronicaaguiar23@gmail.com</a> </p>
+    <p> Phone: (386) 837-6330 </p>
+</div>
  </section>
 </header>
 
@@ -30,9 +39,9 @@ width="200"
 <!--Introduction-->
 <section>
     <h2>Introduction</h2>
-    <p>I am a motivated and driven individual working toward becoming a skilled software engineer. Passionate about problem-solving and building innotative solutions, I am eager to learn, take on new challenges, and grow my expertise in programming and technology development. I look forward to progressing and contributing to impactful projects in the tech industry.</p>
+    <p>I am a motivated and driven individual working toward becoming a skilled software engineer. Passionate about problem-solving and building innovative solutions, I am eager to learn, take on new challenges, and grow my expertise in programming and technology development. I look forward to progressing and contributing to impactful projects in the tech industry.</p>
 </section>
-<hr>
+
 <!--Education-->
 <section>
     <h2>Education</h2>
@@ -45,35 +54,36 @@ width="200"
 <!--Work Experience-->
 <section>
     <h2>Work Experience</h2>
-    <h3>Customer Service and Cashier</h3>
-    <p> Walmart | Sep 2019 - Nov 2021</p>
+        <h3>Customer Service and Cashier</h3>
+            <p> Walmart | Sep 2019 - Nov 2021</p>
+                 <ul>
+                     <li>Resolved customer complaints, maintained customer satisfaction with quick and professional handling of product returns.</li>
+                    <li>Identified and resolved discrepancies and errors in customer accounts.</li>
+                </ul>
+        <h3> Fulfillment Associate</h3>
+            <p>Amazon | Oct 2020 - Present</p>
     <ul>
-        <li>Resolved customer complaints, maintained customer satisfaction with quick and professional handling of product returns.</li>
-        <li>Identified and resolved discrepancies and errors in customer accounts.</li>
+        <li>Guide multiple associates to improve their quality and productivity.</li>
+        <li>Investigate recurring problems associates are experiencing that slow down productivity and report them back to leadership to resolve.</li>
     </ul>
-<h3> Fullfillment Associate</h3>
-<p>Amazon | Oct 2020 - Present</p>
-<ul>
-    <li>Guide multiple associates to improve their quality and productivity.</li>
-    <li>Investigate re-occurring problems associates are experiencing that slow down productivity and report them back to leadership to resolve.</li>
-</ul>
-</section>
+   </section>
 
 <!--Achievements-->
-<section>
-    <h2>Achievements</h2>
-    <ol>
-        <li> I consistently ranked among the top performers at my job, excelling in both productivity and quality metrics.</li>
-        <li> Trained and mentored new hires, accelerating their onboarding process by 15%.</li>
-        <li> Resolved recurring technical and non technical issues, reducing downtime by 50%.</li>
-    </ol>
-    </section>
+    <section>
+        <h2>Achievements</h2>
+            <ol>
+                <li> I consistently ranked among the top performers at my job, excelling in both productivity and quality metrics.</li>
+                <li> Trained and mentored new hires, accelerating their onboarding process by 15%.</li>
+                <li> Resolved recurring technical and non technical issues, reducing downtime by 50%.</li>
+            </ol>
+           </section>
 
 <!--Skills-->
-<section>
+<section class="skills">
     <h2>Skills</h2>
 
     <!--Skills Table-->
+    <div class="skills-container">
     <table>
 
         <!--Table Header: Indicaticates the columns in the table-->
@@ -116,103 +126,120 @@ width="200"
                 <td>Expert</td>
             </tr>
         </tbody>
-    </table>
-</section>
+      </table>
+     </div>
+    </section>
     <!--Reflection-->
     <section>
         <h2>Reflection</h2>
-    <p><em><blockquote>This webpage is a reflection of my current skills and journey as a developer. 
+        <div class="reflection-container">
+            <p><em><blockquote>This webpage is a reflection of my current skills and journey as a developer. 
         I am constantly learning and excited to enhance this page with more features, 
         interactivity, and captivating designs as I grow in my coding journey. 
         Stay tuned for updates!</blockquote></em></p>
-</section>
+      </div>
+      </div>
+     </section>
    </main>
     <footer>
-        <!--Contact-->
-        <section>
-            <h2>Contact Me</h2>
+    <!--Contact-->
+    <section class="contact">
+        <h2>Contact Me</h2>
 
-            <!--My Contact Form-->
-            <form action="#">
-                <!--Name Field-->
-                <div>
-                    <label for="name">Name:</label>
-                    <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Enter your name"
-                    >
-                </div>
+    <div class="form-container">
+     <!--My Contact Form-->
+      <form action="#">
+          <!--Name Field-->
+            <div class="text-input-container">
+                <label for="name">Name:</label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+                class="input"
+                >
+            </div>
 
-                <!--Email Field-->
-                <div>
-                    <label for="email">Email:</label>
-                    <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="enteryouremail@example.com"
-                    >
-                </div>
+            <!--Email Field-->
+            <div class="text-input-container">
+                <label for="email">Email:</label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="enteryouremail@example.com"
+                class="input"
+                >
+            </div>
 
-                <!--Phone Number Field-->
-                <div>
-                    <label for="phone">Phone:</label>
-                    <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    placeholder="(123) 456-7890"
-                    >
-                </div>
+            <!--Phone Number Field-->
+            <div class="text-input-container">
+                <label for="phone">Phone:</label>
+                <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="(123) 456-7890"
+                class="input"
+                >
+            </div>
 
-                <!--Preferred Contact Method CHeckboxes-->
-                <fieldset>
-                    <legend>Preferred Contact Method:</legend>
-                
-                <div>
-                    <input
-                    type="checkbox"
-                    id="email-preference"
-                    name="contact-preference"
-                    value="email"
-                    >
-                    <label for="email-preference">Email</label>
-                    <input
+            <!--Preferred Contact Method CHeckboxes-->
+            <div class="checkbox-container">
+            <fieldset>
+                <legend>What is your preferred Contact Method?</legend>
+            
+        <div class="checkboxes-container">
+            <div>
+                <input
+                type="checkbox"
+                id="email-preference"
+                name="contact-preference"
+                value="email"
+                >
+                <label for="email-preference">Email</label>
+                <input
                     type="checkbox"
                     id="phone-preference"
                     name="contact-preference"
                     value="phone"
-                    >
-                    <label for="phone-preference">Phone</label>
-                </div>
-                </fieldset>
+                >
+                <label for="phone-preference">Phone</label>
+            </div>
+          </div>
+        </fieldset>
 
-                <!--Detailed Message Text Area-->
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea
-                    id="message"
-                    name="message"
-                    required
-                    placeholder="Enter your message here"
-                    ></textarea>
-                </div>
+            <!--Detailed Message Text Area-->
+            <div class="text-input-container">
+             <label for="message">Message:</label>
+             <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Enter your message here"
+                class="input"
+              ></textarea>
+            </div>
 
-                <!--Submit & Clear Button-->
-                <button type="reset">Clear</button>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+            <!--Submit & Clear Button-->
+         <div class="button-container">
+            <button type="reset">Clear</button>
+            <button type="submit">Submit</button>
+        </div>
+       </form>
+      </div>
+    </section>
         <!--Get in Touch-->
         <section>
          <p>Follow my journey and stay in touch! Visit me on:</p>
           <ul>  
-            <li> <a href="https://www.linkedin.com/in/veronica-aguiar-521033199/">LinkedIn</a> </li>
+            <li>
+                 <a href="https://www.linkedin.com/in/veronica-aguiar-521033199/">LinkedIn</a> 
+            </li>
           </ul>
         </section>
     </footer>
