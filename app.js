@@ -1,9 +1,42 @@
+//Code given for Exercise 5
+const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"]; //Guest List
+
+//Step 1
+guests.unshift("BRUTUS"); //Adding a guest to the beginning of the list.
+
+//Question 1: How can you verify that "BRUTUS" was added to the beginning of the array?
+//Answer: You can verify by using indexOf or first element of guests to locate and verify that in the array using guests[0] to check.
+
+//Step 2
+guests.push["AUGUSTUS", "LUCIA"]; //Adding 2 guests to the end of the list
+
+//Step 3
+const spartacusIndex = guests.indexOf("SPARTACUS"); //Checking if "SPARTACUS" is on the list.
+
+//Questiom 2: What would the value of spartacusIndex be if "SPARTACUS" wasn't invited?
+//Answer: The value of spartacusIndex would be if he wasn't invited when using the indexOf method would return -1.
+
+//Step 4
+const indexToRemove = guests.indexOf("CASSIUS"); //Removing "CASSIUS" due to not being able to attend.
+guests.splice(indexToRemove, 1); //(startIndx, deleteCount, itemsToInsert)
+
+//Step 5 
+const specialGuests = guests.slice (0,3); //Sending a special invite to the first 3 guests so I'm excluding them from the list.
+
+//Step 6
+const honoredGuests = guests.slice (0,1); //Extracting honored guests
+const otherGuests = guests.slice (1) //Extracting the rest of the guests.
+otherGuests.sort(); //Sorts the other guests
+const sortedGuests = honoredGuests.concat(otherGuests); //Combines both arrays, keeping the honored guests at the top and placing the rest in alphabetical order.
+
+//Below is the codes from previous exercises:
+
 //Code given for Exercise 4
 const emblemClue1 = "Eagle";
 const emblemClue2 = "Laurel";
 const emblemClue3 = 7;
 
-//Step 1
+//Exercise 4
 let locationStart = "";
 
 
@@ -20,7 +53,7 @@ else
     locationStart = "Villa"
 }
 
-//Step 2
+//Exercise 4
 if (emblemClue2 === "Laurel" && locationStart === "Forum")
 {
     locationStart += " of Augustus";
@@ -30,7 +63,7 @@ else if (emblemClue2 === "Grapes" || locationStart === "Villa")
     locationStart += " of Pompey"
 }
 
-//Step 3
+//Exercise 4
 switch (emblemClue3)
 {
     case 7:
@@ -46,10 +79,6 @@ switch (emblemClue3)
         locationStart += " West";
         break; 
 }
-
-//Question: Why is it important to be careful when using == (double equals) instead of === (triple equals) in our conditionals?
-//Answer: Double equals (==), tries to convert the operands to the same type before making the comparison. While using triple equals (===) checks both the value and the type, ensuring a stricter equality check. Using double equals can lead to unexpected results in certain situations so that's why we 99.99% of the time only use triple equals (===).
-
 
 //Code from Exercise 3
 const randomDecimal = Math.random();
