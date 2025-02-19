@@ -1,35 +1,79 @@
-//Code given for Exercise 5
-const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"]; //Guest List
+//Code given for Exercise 6
+const guests = {
+    ANTONY: {
+      title: "General",
+      region: "Rome",
+      dietaryPreference: "Vegetarian",
+      pastGifts: ["Golden Laurel", "Chariot"]
+    },
+    CICERO: {
+      title: "Orator",
+      region: "Arpinum",
+      dietaryPreference: "Omnivore",
+      pastGifts: ["Scroll of Proverbs", "Quill"]
+    }
+  };
+  
+//Step 1: Adding BRUTUS to the guest directory
 
-//Step 1
+guests.BRUTUS = {
+    title: "Senator",
+    region: "Rome",
+    dietaryPreference: "Vegan",
+    pastGifts: ["Silver Dagger", "Marble Bust"]
+}
+
+//Step 2: Updating CICERO's past gifts
+
+guests.CICERO.pastGifts.push("Golden Lyre"); //updating gift to the end of the pastGifts list for CICERO
+
+//Step 3: Retrieving the region of "ANTHONY"
+
+const antonyRegion = guests.ANTONY.region; //Using dot notations to grab references
+
+
+//Step 4: Due to unforeseen political events, "CICERO" needs to be discreetly removed from the guest list.
+
+delete guests.CICERO; //the "delete" keyword to remove properties from an object
+
+
+//Step 5: Assign ANTONY's profile to a new variable named generalProfile. Then, using this new variable, change the region of ANTONY to "Egypt".
+
+const generalProfile = guests.ANTONY; // Assigning to new variable
+generalProfile.region = "Egypt"; //changing region to Egypt
+
+//Question: After executing Step 5, what will be the region of ANTONY in the original guests object?
+//Answer: The region for ANTONY will now be "Egypt". This is because objects are reference types and when we assign the object to a new variable, we're not making a new copy of the object. Instead, both variables are just pointing to the same object in memory. Therefore, changes that are made through one variable are reflected in the other.
+
+
+
+//Below is the codes from previous exercises:
+
+//Code given for Exercise 5
+//const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"]; Guest list from previous exercise but since we're using objects now i'm commenting this code out.
+
+//Exercise 5
 guests.unshift("BRUTUS"); //Adding a guest to the beginning of the list.
 
-//Question 1: How can you verify that "BRUTUS" was added to the beginning of the array?
-//Answer: You can verify by using indexOf or first element of guests to locate and verify that in the array using guests[0] to check.
-
-//Step 2
+//Exercise 5
 guests.push["AUGUSTUS", "LUCIA"]; //Adding 2 guests to the end of the list
 
-//Step 3
+//Exercise 5
 const spartacusIndex = guests.indexOf("SPARTACUS"); //Checking if "SPARTACUS" is on the list.
 
-//Questiom 2: What would the value of spartacusIndex be if "SPARTACUS" wasn't invited?
-//Answer: The value of spartacusIndex would be if he wasn't invited when using the indexOf method would return -1.
-
-//Step 4
+//Exercise 5
 const indexToRemove = guests.indexOf("CASSIUS"); //Removing "CASSIUS" due to not being able to attend.
 guests.splice(indexToRemove, 1); //(startIndx, deleteCount, itemsToInsert)
 
-//Step 5 
+//Exercise 5
 const specialGuests = guests.slice (0,3); //Sending a special invite to the first 3 guests so I'm excluding them from the list.
 
-//Step 6
+//Exercise 5
 const honoredGuests = guests.slice (0,1); //Extracting honored guests
 const otherGuests = guests.slice (1) //Extracting the rest of the guests.
 otherGuests.sort(); //Sorts the other guests
 const sortedGuests = honoredGuests.concat(otherGuests); //Combines both arrays, keeping the honored guests at the top and placing the rest in alphabetical order.
 
-//Below is the codes from previous exercises:
 
 //Code given for Exercise 4
 const emblemClue1 = "Eagle";
