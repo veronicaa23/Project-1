@@ -1,3 +1,29 @@
+//Code given for Exercise 7
+const friend = "BRUTUS"
+const shiftValue = 3;
+
+//Step 1: Recall the Latin alphabet variable from the previous exercise.
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+//Step 2: Use a loop to iterate through each letter of "BRUTUS". Employ the Caesar Cipher technique to shift each letter by the given value. Store the encrypted name in a variable.
+let encryptedFriend = "";
+for (let i = 0; i < friend.length; i++) //Iterating through each letter of "BRUTUS"
+{
+    const letter = friend[i];
+    const index = alphabet.indexOf(letter.toLowerCase());
+    const newIndex = (index + shiftValue) % alphabet.length;
+    encryptedFriend += alphabet[newIndex].toUpperCase();
+}
+
+//Question 1: What advantage does using a loop provide over manually encrypting each letter?
+//Answer: Using a loop allows us to iterate through each letter of the string and apply the encryption technique to each letter and ensures consistent encryption and can easily adapt to names of any length. This makes the process more efficient and less prone to errors.
+
+//Question 2: Explain the role of % alphabet.length in our loop. How does it aid in the encryption process?
+//Answer: The % alphabet.length ensures that the index remains within the bounds of the alphabet. It helps in wrapping around the alphabet when the shift value exceeds the length of the alphabet. This ensures that the encryption process is accurate and maintains the cyclic nature of the Caesar Cipher.
+
+
+//Below is the codes from previous exercises:
+
 //Code given for Exercise 6
 const guests = {
     ANTONY: {
@@ -14,7 +40,7 @@ const guests = {
     }
   };
   
-//Step 1: Adding BRUTUS to the guest directory
+//Adding BRUTUS to the guest directory
 
 guests.BRUTUS = {
     title: "Senator",
@@ -23,31 +49,24 @@ guests.BRUTUS = {
     pastGifts: ["Silver Dagger", "Marble Bust"]
 }
 
-//Step 2: Updating CICERO's past gifts
+//Updating CICERO's past gifts
 
 guests.CICERO.pastGifts.push("Golden Lyre"); //updating gift to the end of the pastGifts list for CICERO
 
-//Step 3: Retrieving the region of "ANTHONY"
+//Retrieving the region of "ANTHONY"
 
 const antonyRegion = guests.ANTONY.region; //Using dot notations to grab references
 
 
-//Step 4: Due to unforeseen political events, "CICERO" needs to be discreetly removed from the guest list.
+//Due to unforeseen political events, "CICERO" needs to be discreetly removed from the guest list.
 
 delete guests.CICERO; //the "delete" keyword to remove properties from an object
 
 
-//Step 5: Assign ANTONY's profile to a new variable named generalProfile. Then, using this new variable, change the region of ANTONY to "Egypt".
+//Assign ANTONY's profile to a new variable named generalProfile. Then, using this new variable, change the region of ANTONY to "Egypt".
 
 const generalProfile = guests.ANTONY; // Assigning to new variable
 generalProfile.region = "Egypt"; //changing region to Egypt
-
-//Question: After executing Step 5, what will be the region of ANTONY in the original guests object?
-//Answer: The region for ANTONY will now be "Egypt". This is because objects are reference types and when we assign the object to a new variable, we're not making a new copy of the object. Instead, both variables are just pointing to the same object in memory. Therefore, changes that are made through one variable are reflected in the other.
-
-
-
-//Below is the codes from previous exercises:
 
 //Code given for Exercise 5
 //const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"]; Guest list from previous exercise but since we're using objects now i'm commenting this code out.
@@ -137,14 +156,17 @@ const randomInRange = randomDecimal * range; //Adjusting the range to get a numb
 const randomInt = Math.floor(randomInRange); //Convert the decimal number to an integer to get values between 0 and (range -1)
 
 //Code from Exercise 3
-const shiftValue = randomInt + 3; //shift the range to get an integer between 3 and 33
+//const shiftValue = randomInt + 3; //shift the range to get an integer between 3 and 33
+//commenting out the code above since it's already at the top of the page
 
 
 //Codde given from exercise 2
-const friend = "BRUTUS"
+//const friend = "BRUTUS"
+//commenting out the code above since it's already at the top of the page
 
 //Code from Exercise 2
-const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//commenting out the code above since it's already at the top of the page
 
 //Code from exercise 1
 let partyLocation = "PALACE ROOF"; //String
