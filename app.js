@@ -1,11 +1,59 @@
-//Code given for Exercise 7
-const friend = "BRUTUS"
+//Code given for Exercise 8
+const friend = "BRUTUS";
 const shiftValue = 3;
-
-//Step 1: Recall the Latin alphabet variable from the previous exercise.
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-//Step 2: Use a loop to iterate through each letter of "BRUTUS". Employ the Caesar Cipher technique to shift each letter by the given value. Store the encrypted name in a variable.
+//Step 1: Create a function named encryptLetter that takes a letter and a shift value as parameters. This function should return the encrypted version of the letter.
+function encryptLetter(letter, shift)
+{
+    const index = alphabet.indexOf(letter.toLowerCase()); //The indexOf method is used to find the index of the letter in the alphabet.
+    const newIndex = (index + shift) % alphabet.length; //The modulo operator is used to wrap around the alphabet if the shift value is greater than the length of the alphabet.
+    return alphabet[newIndex]; //The new index is used to find the new letter in the alphabet.
+}
+
+//Step 2: Create a function named encryptMessage that takes a word and a shift value as parameters. This function should return the encrypted version of the entire word.
+function encryptMessage(word,shift)
+{
+    let encryptMessage = ""; //An empty string is created to store the encrypted message.
+    for (let i = 0; i < word.length; i++) //A loop is used to iterate through each letter of the word.
+    {
+        encryptMessage += encryptLetter(word[i], shift); //The encryptLetter function is called for each letter of the word and the encrypted letter is added to the encrypted message.
+    }
+    return encryptMessage;
+}
+
+//Step 3: Create a function named decryptLetter that takes an encrypted letter and a shift value as parameters. This function should return the decrypted version of the letter.
+function decryptLetter (letter,shift)
+{
+    const index = alphabet.indexOf(letter.toLowerCase()); 
+    const newIndex = (index - shift + aphabet.length) %alphabet.length; //The shift value is subtracted from the index to get the new index.
+    return alphabet[newIndex];
+}
+
+//Step 4: Create a function named decryptMessage that takes an encrypted word and a shift value as parameters. This function should return the decrypted version of the entire word.
+function decryptMessage (word, shift)
+{
+    let decryptMessage = "";
+    for (let i = 0; i < word.length; i++) //A loop is used to iterate through each letter of the word.
+    {
+        decryptMessage += decryptLetter(word[i], shift); //The decryptLetter function is called for each letter of the word and the decrypted letter is added to the decrypted message.
+    }
+    return decryptMessage;
+}
+
+
+//Question: If Caesar encrypts the word "BRUTUS" using our encryptMessage function and then decrypts the result using our decryptMessage function, will he get "BRUTUS" back? Why or why not?
+//Answer: Yes, what will return back to Caesar is "BRUTUS" since the shift value is 3 and the alphabet is 26 letters long. The shift value is less than the length of the alphabet so the word will return back to its original form. The decryption function is the inverse of the encryption function so the word will return back to its original form and cancel each other out.
+
+
+//Code given for Exercise 7
+//const friend = "BRUTUS"
+//const shiftValue = 3;
+
+//Recall the Latin alphabet variable from the previous exercise.
+//const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+//Use a loop to iterate through each letter of "BRUTUS". Employ the Caesar Cipher technique to shift each letter by the given value. Store the encrypted name in a variable.
 let encryptedFriend = "";
 for (let i = 0; i < friend.length; i++) //Iterating through each letter of "BRUTUS"
 {
@@ -14,15 +62,6 @@ for (let i = 0; i < friend.length; i++) //Iterating through each letter of "BRUT
     const newIndex = (index + shiftValue) % alphabet.length;
     encryptedFriend += alphabet[newIndex].toUpperCase();
 }
-
-//Question 1: What advantage does using a loop provide over manually encrypting each letter?
-//Answer: Using a loop allows us to iterate through each letter of the string and apply the encryption technique to each letter and ensures consistent encryption and can easily adapt to names of any length. This makes the process more efficient and less prone to errors.
-
-//Question 2: Explain the role of % alphabet.length in our loop. How does it aid in the encryption process?
-//Answer: The % alphabet.length ensures that the index remains within the bounds of the alphabet. It helps in wrapping around the alphabet when the shift value exceeds the length of the alphabet. This ensures that the encryption process is accurate and maintains the cyclic nature of the Caesar Cipher.
-
-
-//Below is the codes from previous exercises:
 
 //Code given for Exercise 6
 const guests = {
