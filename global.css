@@ -1,0 +1,164 @@
+/* Resetting default styles */
+html {
+    box-sizing: border-box;
+    width:100%;
+    font-size: 18px; /* Setting base font size */
+    font-family: 'Courier New', monospace, sans-serif; /* Found my font from https://www.w3schools.com/cssref/css_websafe_fonts.php */
+    }
+/* General Styles */
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Form Section Styles */
+  section {
+    background-color: white;
+    margin: 20px auto; 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    max-width: 1000px; /* Setting a max-width for the form section */
+    width: 90%; /* Making the form responsive */
+  }
+  
+  /* Form Input Styles */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+    /* Credit to getting monochromatic color from https://www.color-hex.com/color/007bff */
+  button:hover {
+    background-color: #0056b3; /* Darkening the button color on hover */
+  }
+  
+    /*Adding styles to make the memes look cleaner and more like classic memes*/
+    .meme-container {
+        margin-top: 20px;
+    }
+
+    .meme {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+        max-width: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    .top-text, .bottom-text {
+        font-family: Arial, sans-serif; /* Using a more common font for meme text */
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .top-text {
+        top: 10px;
+    }
+
+    .bottom-text {
+        bottom: 10px;
+    }
+    /* Remove Button Styling */
+    .remove-button {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background-color: rgba(255,77,77,0.9);
+       color:white;
+       border:none;
+       padding: 12px 24px;
+       font-size: 1.2rem;
+       border-radius: 8px;
+       cursor: pointer;
+       opacity: 0;
+    }
+
+    /* Show button on hover */
+    .meme:hover .remove-button {
+       opacity: 1;
+    }
+
+    /*Button Hover Effect*/
+    .remove-button:hover {
+        background-color: rgba(204, 0, 0, 0.9);
+    }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
